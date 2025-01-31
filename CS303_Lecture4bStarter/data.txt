@@ -1,0 +1,12 @@
+Bugs Bunny,Chaos Coordinator,1111,1
+Yosemite Sam,Miner,2222,2
+Gwen Stefani,Artist,3333,3
+Albert Einstein,SmartyPants,4444,4
+Jim Parsons,AlsoASmartyPants,5555,5
+Mickey Mouse,Mouse,6666,6
+Daffy Duck,Ducky,7777,7
+Spongebob Squarepants,Cook,8888,8
+James Sullivan,Monster,9999,99
+Fred Flintstone,Miner,0000,00
+Buzz Lightyear,Pilot,1000,10
+Porky Pig,Pig,2111,21
