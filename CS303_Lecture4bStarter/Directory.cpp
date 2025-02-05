@@ -32,12 +32,22 @@ void Directory::loadData(const string& source_name) {
 //PRE:  receives string of the employee name to find
 //POST: return the index of the found employee or -1 if not found
 int Directory::findEntry(const string& name) const {
+	for (int i = 0; i < theDirectory.size(); i++) {
+		if (name == theDirectory[i].getName()) {
+			return i;
+		}
+	}
 	return -1;
 }
 
 //PRE:  receives string of the employee name to find
 //POST: return the directory entry at the that or return empty employee
 Employee Directory::lookupEntry(const string& name) const{
+	for (int i = 0; i < theDirectory.size(); i++) {
+		if (name == theDirectory[i].getName()) {
+			return theDirectory[i];
+		}
+	}
 	return Employee();
  
 }
@@ -45,6 +55,11 @@ Employee Directory::lookupEntry(const string& name) const{
 //PRE:  receives string of the employee name to remove
 //POST: erase the employee at that directory or just exit the function 
 void Directory::removeEntry(const string& name) {
+	for (int i = 0; i < theDirectory.size(); i++) {
+		if (name == theDirectory[i].getName()) {
+			theDirectory.erase(i);
+		}
+	}
  
 }
 
@@ -52,7 +67,14 @@ void Directory::removeEntry(const string& name) {
 //POST: if found, update the other fields in the employee object
 //      or add the employee
 void Directory::changeEntry(const Employee & new_Employee){ 
- 
+	for (int i = 0; i < theDirectory.size(); i++) {
+		if (new_Employee.getName() == theDirectory[i].getName()) {
+			theDirectory.erase(i);
+			theDirectory.insert(i, new_Employee);
+			return;
+		}
+	}
+	theDirectory.pushBack(new_Employee);
 }
 
 void Directory::printDirectory() {
